@@ -1,0 +1,4 @@
+Sep 30, 2022 2:15:48 PM sept_2022.designpattern.SingletonLogger <init>
+FINEDEPOSIT (4567): 30.45$
+WITHDRAW (345): 20.3$
+TRANSFER (456->345): 15.23$
