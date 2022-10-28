@@ -10,17 +10,22 @@ import java.util.stream.Collectors;
 public class WordCountStreams {
 
     public static Map<String, Long> countWords(List<String> list) {
-        Map<String, Long> wordCount = list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
-        return wordCount;
+        return list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
     }
 
     public static Map<String, Long> countChars(String str) {
 
-        Map<String, Long> charsMap = Arrays.stream(str.split(""))
+        return Arrays.stream(str.split(""))
                 .map(String::toLowerCase)
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+    }
 
-        return charsMap;
+    public static void occurrence(List<String> list, String [] arr) {
+        Map<String, Long> wordsMap = list.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+
+        for (String s : arr) {
+            System.out.println(s + " : " + wordsMap.get(s));
+        }
     }
 
     public static void main(String[] args) {
@@ -29,6 +34,7 @@ public class WordCountStreams {
 
         Map<String, Long> wordMap = countWords(names);
         Map<String, Long> charsMap = countChars(str);
+        occurrence(names, new String [] {"Sam", "James"});
 
         wordMap.forEach((key, value) -> System.out.println("["+ key + ":" + value +"]"));
         charsMap.forEach((i,j) -> System.out.println("["+ i + ":" + j+ "]"));
