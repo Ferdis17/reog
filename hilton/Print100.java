@@ -31,6 +31,6 @@ public class Print100 {
 
 
 
-        System.out.println(s == s1);
+        System.out.println(s.equals(s1));
     }
 }
