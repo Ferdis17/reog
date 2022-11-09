@@ -1,7 +1,7 @@
 package sept_2022;
 
-import sept_2022.designpattern.Singleton;
-import sept_2022.designpattern.SingletonLogger;
+import sept_2022.designpattern.singleton.Singleton;
+import sept_2022.designpattern.singleton.SingletonLogger;
 
 import java.util.ArrayList;
 import java.util.Arrays;

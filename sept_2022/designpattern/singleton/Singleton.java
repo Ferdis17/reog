@@ -1,4 +1,4 @@
-package sept_2022.designpattern;
+package sept_2022.designpattern.singleton;
 
 public class Singleton {
     private static Singleton mySingletonObject;

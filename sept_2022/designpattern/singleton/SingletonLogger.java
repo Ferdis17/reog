@@ -1,4 +1,4 @@
-package sept_2022.designpattern;
+package sept_2022.designpattern.singleton;
 
 import java.io.FileWriter;
 import java.io.IOException;
